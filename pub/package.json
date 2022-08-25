@@ -22,5 +22,6 @@
   "dependencies": {
     "pareto-core-types": "^0.1.0"
   },
-  "content-fingerprint": "ffbcbf79d505ec16f7347be7d24364c937caea9d"
+  "interface-fingerprint": "da6bfd5a3cfca3fa9ea0a4b6fb4419b9679efba9",
+  "content-fingerprint": "22a75d8f876179822dfb3610bc3c3b8b0b183b2f"
 }
