@@ -1,0 +1,26 @@
+{
+  "author": "Corno",
+  "files": [
+    "dist",
+    "data"
+  ],
+  "keywords": [],
+  "main": "./dist/index.js",
+  "bugs": {
+    "url": "https://github.com/corno/pareto/issues"
+  },
+  "description": "",
+  "homepage": "https://github.com/corno/pareto#readme",
+  "license": "ISC",
+  "name": "api-pareto-ugly-stuff",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corno/api-pareto-ugly-stuff.git"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.1.0",
+  "dependencies": {
+    "pareto-core-types": "^0.1.0"
+  },
+  "content-fingerprint": "ffbcbf79d505ec16f7347be7d24364c937caea9d"
+}
