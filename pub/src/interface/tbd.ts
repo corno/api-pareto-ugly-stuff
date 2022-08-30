@@ -1,6 +1,6 @@
 
 import * as pt from "pareto-core-types"
-import { Nested } from "pareto-core-types"
+import * as pm from "pareto-core-state"
 
 export type ArrayLength = <T>(array: T[]) => number
 export type GetElement = <T>(array: T[], position: number) => T
@@ -19,6 +19,9 @@ export type TrimEnd = (value: string) => string
 export type StringLength = (value: string) => number
 export type SubStr = (value: string, begin: number, length: number) => string
 
-export type Max = (a: number, b: Nested<number>) => number
+export type Max = (a: number, b: pt.Nested<number>) => number
 
 
+
+export type DoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
+export type LookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
