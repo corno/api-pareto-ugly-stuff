@@ -2,26 +2,26 @@
 import * as pt from "pareto-core-types"
 import * as pm from "pareto-core-state"
 
-export type ArrayLength = <T>(array: T[]) => number
-export type GetElement = <T>(array: T[], position: number) => T
-export type Push = <T>(array: T[], element: T) => void
-export type Includes = (array: string[], value: string) => boolean
+export type FArrayLength = <T>(array: T[]) => number
+export type FGetElement = <T>(array: T[], position: number) => T
+export type XPush = <T>(array: T[], element: T) => void
+export type FIncludes = (array: string[], value: string) => boolean
 
-export type JSONStringify = (data: any) => string
-export type JSONParse = (str: string) => any
+export type FJSONStringify = (data: any) => string
+export type FJSONParse = (str: string) => any
 
 
-export type ToRawArray = <T>($: pt.Array<T>) => T[]
-export type ToRawDictionary = <T>($: pt.Dictionary<T>) => { [key: string]: T }
+export type FToRawArray = <T>($: pt.Array<T>) => T[]
+export type FToRawDictionary = <T>($: pt.Dictionary<T>) => { [key: string]: T }
 
 //string
-export type TrimEnd = (value: string) => string
-export type StringLength = (value: string) => number
-export type SubStr = (value: string, begin: number, length: number) => string
+export type FTrimEnd = (value: string) => string
+export type FStringLength = (value: string) => number
+export type FSubStr = (value: string, begin: number, length: number) => string
 
-export type Max = (a: number, b: pt.Nested<number>) => number
+export type FMax = (a: number, b: pt.Nested<number>) => number
 
+export type XDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
+export type XLookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
 
-
-export type DoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
-export type LookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
+export type FStripQuotes = ($: string) => string
