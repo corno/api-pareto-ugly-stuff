@@ -7,8 +7,8 @@ export type FGetElement = <T>(array: T[], position: number) => T
 export type XPush = <T>(array: T[], element: T) => void
 export type FIncludes = (array: string[], value: string) => boolean
 
-export type FJSONStringify = (data: any) => string
-export type FJSONParse = (str: string) => any
+export type FJSONStringify = <T>(data: T) => string
+export type FJSONParse = <T>(str: string) => T
 
 
 export type FToRawArray = <T>($: pt.Array<T>) => T[]
@@ -23,5 +23,3 @@ export type FMax = (a: number, b: pt.Nested<number>) => number
 
 export type XDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
 export type XLookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
-
-export type FStripQuotes = ($: string) => string
