@@ -29,8 +29,8 @@ export type FSubStr = ($: {
     readonly "length": number,
 }) => string
 export type FStartsWith = ($: {
-    contextString: string
-    searchString: string
+   readonly "contextString": string
+   readonly "searchString": string
 }) => boolean
 
 export type XDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
