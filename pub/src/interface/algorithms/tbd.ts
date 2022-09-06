@@ -29,9 +29,19 @@ export type FSubStr = ($: {
     readonly "length": number,
 }) => string
 export type FStartsWith = ($: {
-   readonly "contextString": string
-   readonly "searchString": string
+    readonly "contextString": string
+    readonly "searchString": string
 }) => boolean
 
-export type PDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
-export type PLookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
+// export type PDoUntil = <T>(
+//     $: pm.Stack<T>,
+//     $c: ($: T) => boolean
+// ) => void
+
+export type PLookAhead = <T>(
+    $: pm.Stack<T>,
+    $i: {
+        readonly "exists": ($: T) => void
+        readonly "notExists": () => void
+    }
+) => void
