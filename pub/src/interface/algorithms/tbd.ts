@@ -33,5 +33,5 @@ export type FStartsWith = ($: {
    readonly "searchString": string
 }) => boolean
 
-export type XDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
-export type XLookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
+export type PDoUntil = <T>(stack: pm.Stack<T>, callback: ($: T) => boolean) => void
+export type PLookAhead = <T>(stack: pm.Stack<T>, exists: ($: T) => void, notExists: () => void) => void
