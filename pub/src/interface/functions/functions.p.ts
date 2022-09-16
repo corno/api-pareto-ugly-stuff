@@ -1,18 +1,20 @@
 
-import * as pm from "pareto-core-state"
 import * as pt from "pareto-core-types"
 
 export type FArrayLength = <T>($: pt.Array<T>) => number
+
 export type FGetElement = <T>($: {
     readonly "array": pt.Array<T>,
     readonly "position": number
 }) => T
+
 export type FIncludes = ($: {
     readonly "array": pt.Array<string>,
     readonly "value": string
 }) => boolean
 
 export type FJSONStringify = <T>($: T) => string
+
 export type FJSONParse = <T>($: string) => T
 
 
@@ -22,12 +24,15 @@ export type FJSONParse = <T>($: string) => T
 
 //string
 export type FTrimEnd = ($: string) => string
+
 export type FStringLength = ($: string) => number
+
 export type FSubStr = ($: {
     readonly "value": string,
     readonly "begin": number,
     readonly "length": number,
 }) => string
+
 export type FStartsWith = ($: {
     readonly "contextString": string
     readonly "searchString": string
@@ -38,10 +43,10 @@ export type FStartsWith = ($: {
 //     $c: ($: T) => boolean
 // ) => void
 
-export type PLookAhead = <T>(
-    $: pm.Stack<T>,
-    $i: {
-        readonly "exists": ($: T) => void
-        readonly "notExists": () => void
-    }
-) => void
+// export type PLookAhead = <T>(
+//     $: pm.Stack<T>,
+//     $i: {
+//         readonly "exists": ($: T) => void
+//         readonly "notExists": () => void
+//     }
+// ) => void
