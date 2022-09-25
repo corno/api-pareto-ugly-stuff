@@ -1,5 +1,6 @@
 
 import * as pt from "pareto-core-types"
+import { IStreamConsumer } from "../interfaces/interfaces.p"
 
 export type FArrayLength = <T>($: pt.Array<T>) => number
 
@@ -15,7 +16,14 @@ export type FIncludes = ($: {
 
 export type FJSONStringify = <T>($: T) => string
 
-export type FJSONParse = <T>($: string) => T
+//export type FJSONParse = <T>($: string) => T
+
+
+export type FJSONParseStream = <T>(
+    $d: {
+        connectToStream: ($i: IStreamConsumer<string>) => void
+    }
+) => pt.AsyncValue<T>
 
 
 //export type XPush = <T>(array: T[], element: T) => void
