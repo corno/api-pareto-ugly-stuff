@@ -18,10 +18,11 @@ export type FIncludes = ($: {
 export type FJSONStringify = <T>($: T) => string
 
 export type FCreateJSONParser = <T>(
-    $i: ($: T) => void,
+    $i: {
+        callback: ($: T) => void,
+        onError: ($: String) => void,
+    },
 ) => common.IStreamConsumer<string>
-
-
 
 //export type XPush = <T>(array: T[], element: T) => void
 //export type FToRawArray = <T>($: pt.Array<T>) => T[]
