@@ -23,6 +23,6 @@
     "api-pareto-common": "^0.2.0",
     "pareto-core-types": "^0.6.0"
   },
-  "interface-fingerprint": "e6d8e8d3e9ddb7a45884207f83ee15f3cde0a8b3",
-  "content-fingerprint": "41b6cbf11ac24e7dfe7ec0fc6f76f10349fb7828"
+  "interface-fingerprint": "439117b074a8417aff0e392236dd19804c085d0f",
+  "content-fingerprint": "c9c8f324c780e4042d3d16d4186746610c4ae98e"
 }
